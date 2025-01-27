@@ -1,0 +1,131 @@
+.selection-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1f2225; /* Dark gray background */
+  padding: 0.8rem 0.5rem; /* Reduced padding for smaller height */
+  border-radius: 10px;
+  margin: 1rem 0; /* Reduced margin for less space between hero and bar */
+  width: 100%;
+  max-width: 100%;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  gap: 1rem; /* Slightly reduced gap */
+  flex-wrap: wrap;
+  transition: background-color 0.3s ease;
+}
+
+.selection-bar:hover {
+  background-color: #0f1011d9; /* Lighter gray on hover */
+}
+
+.select-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+  min-width: 180px; /* Slightly smaller width for better responsiveness */
+}
+
+label {
+  font-size: 0.9rem; /* Reduced font size for compact appearance */
+  font-weight: bold;
+  color: #fff; /* White text for labels */
+}
+
+.dropdown,
+.price-input {
+  width: 100%;
+  padding: 0.5rem; /* Reduced padding for smaller input height */
+  font-size: 0.9rem; /* Adjusted font size */
+ /* Soft gray border */
+  border-radius: 5px;
+  outline: none;
+  background-color: #343a40; /* Darker background for inputs */
+  color: #fff; /* White text */
+  transition: border-color 0.2s ease;
+}
+
+.dropdown:focus,
+.price-input:focus {
+  border-color: #007bff; /* Light blue border on focus */
+}
+
+.price-inputs {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.separator {
+  font-size: 1rem; /* Reduced separator size */
+  color: #ddd; /* Light gray for separator */
+}
+
+/* Search button */
+.search-button {
+  margin-top: 0.5rem; /* Reduced margin for better alignment */
+  background-color: #343a40; /* Slightly dark gray to contrast with input */
+  color: white;
+  padding: 0.5rem 1rem; /* Adjusted padding for smaller button height */
+  font-size: 0.9rem; /* Reduced font size */
+  border: 1px solid #958f8f; /* Darker border for contrast */
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  height: auto; /* Dynamically adjust height */
+  min-width: 140px; /* Reduced button width */
+}
+
+.search-button:hover {
+  background-color: #222; /* Darker shade on hover */
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .selection-bar {
+    padding: 1rem 0.5rem; /* Adjusted padding */
+  }
+
+  .select-item {
+    flex: 1 0 48%;
+  }
+
+  .search-button {
+    width: 100%;
+    padding: 0.75rem; /* Adjusted padding */
+  }
+}
+
+@media (max-width: 768px) {
+  .selection-bar {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.5rem; /* Reduced padding for smaller screens */
+  }
+
+  .select-item {
+    max-width: 100%;
+  }
+
+  .search-button {
+    width: 100%;
+    padding: 0.75rem; /* Adjusted padding */
+  }
+}
+
+@media (max-width: 480px) {
+  .selection-bar {
+    padding: 0.5rem;
+    margin: 0.5rem 0; /* Further reduced margin for compact layout */
+  }
+
+  .select-item {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .search-button {
+    width: 100%;
+    padding: 0.75rem; /* Adjusted padding */
+  }
+}
