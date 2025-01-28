@@ -12,6 +12,7 @@
   gap: 1rem; /* Slightly reduced gap */
   flex-wrap: wrap;
   transition: background-color 0.3s ease;
+ 
 }
 
 .selection-bar:hover {
@@ -63,7 +64,7 @@ label {
 
 /* Search button */
 .search-button {
-  margin-top: 0.5rem; /* Reduced margin for better alignment */
+ margin-top: 28px;
   background-color: #343a40; /* Slightly dark gray to contrast with input */
   color: white;
   padding: 0.5rem 1rem; /* Adjusted padding for smaller button height */
