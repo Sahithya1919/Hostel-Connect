@@ -1,5 +1,4 @@
 import "./Hero.css";
-import SelectionBar from "./SelectionBar";
 
 const Hero = () => {
   return (

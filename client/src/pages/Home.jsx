@@ -1,9 +1,8 @@
-import Hero from "../components/Hero";
-import Navbar from "../components/Navbar";
-import SelectionBar from "../components/SelectionBar";
-import HostelList from "../components/HostelList";
-import Footer from "../components/Footer";
-
+import Hero from "@/components/Hero/Hero.jsx";
+import Navbar from "@/components/Navbar/Navbar.jsx";
+import SelectionBar from "@/components/SelectionBar/SelectionBar.jsx";
+import HostelList from "@/components/HostelList/HostelList.jsx";
+import Footer from "@/components/Footer/Footer.jsx";
 const Home = () => {
   const recommendedHostels = [
     {
