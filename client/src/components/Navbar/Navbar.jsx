@@ -1,63 +1,72 @@
+import { Link } from "react-router-dom";
 import "./Navbar.css";
+
 const Navbar = () => {
   return (
     <nav
-      class="navbar navbar-expand-lg bg-dark border-bottom border-body"
+      className="navbar navbar-expand-lg bg-dark border-bottom border-body"
       data-bs-theme="dark"
     >
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">
+      <div className="container-fluid">
+        {/* Brand Logo */}
+        <Link className="navbar-brand" to="/">
           <img
             className="bi me-2"
             width="40"
             height="32"
             role="img"
-            alt=""
+            alt="Logo"
             src="https://i.ibb.co/M5hHFdL/image.png"
           />
-        </a>
+        </Link>
+
+        {/* Hamburger Menu for Mobile View */}
         <button
-          class="navbar-toggler"
+          className="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
-          data-bs-target="#navbarColor01"
-          aria-controls="navbarColor01"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarColor01">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">
+
+        {/* Collapsible Navbar */}
+        <div className="collapse navbar-collapse" id="navbarNav">
+          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+            <li className="nav-item">
+              <Link className="nav-link active" to="/">
                 Home
-              </a>
+              </Link>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
+            <li className="nav-item">
+              <Link className="nav-link" to="/features">
                 Features
-              </a>
+              </Link>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
+            <li className="nav-item">
+              <Link className="nav-link" to="/contact">
                 Contact Us
-              </a>
+              </Link>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
+            <li className="nav-item">
+              <Link className="nav-link" to="/about">
                 About
-              </a>
+              </Link>
             </li>
           </ul>
-          <form class="d-flex" role="search">
+
+          {/* Search Bar */}
+          <form className="d-flex mt-3 mt-lg-0" role="search">
             <input
-              class="form-control me-2 search-navbar"
+              className="form-control me-2 search-navbar"
               type="search"
               placeholder="Search"
               aria-label="Search"
             />
-            <button class="btn btn-outline-light " type="submit">
+            <button className="btn btn-outline-light" type="submit">
               Search
             </button>
           </form>
@@ -66,4 +75,5 @@ const Navbar = () => {
     </nav>
   );
 };
+
 export default Navbar;

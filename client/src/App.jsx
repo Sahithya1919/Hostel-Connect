@@ -7,12 +7,14 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import List from "./pages/List";
 import Hostel from "./pages/Hostel";
+import About from "./pages/About/About";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />}></Route>
+        <Route path="/about" element={<About />} />
         <Route path="/hostels" element={<List />}></Route>
         <Route path="/hostels/:id" element={<Hostel />}></Route>
       </Routes>
