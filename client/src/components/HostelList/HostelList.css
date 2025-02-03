@@ -1,9 +1,10 @@
+/* General Hostel List Styles */
 .hostel-list {
-  margin: 2rem 0; /* Increased margin for a cleaner separation */
+  margin: 2rem 0;
 }
 
 .list-section {
-  margin-bottom: 2.5rem; /* Slightly more space between list sections */
+  margin-bottom: 2.5rem;
 }
 
 .list-title {
@@ -14,19 +15,21 @@
   padding-left: 0.5rem;
 }
 
+/* Hostels Row */
 .hostels-row {
   display: flex;
-  gap: 1.5rem; /* Slightly larger gap between cards */
+  gap: 1.5rem;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
+/* Hostel Card */
 .hostel-card {
-  background-color: #f8f9fa; /* Light background for cards */
+  background-color: #f8f9fa;
   border: 1px solid #ddd;
   border-radius: 8px;
   overflow: hidden;
-  width: calc(25% - 1.5rem); /* Four cards per row with space */
+  width: calc(25% - 1.5rem);
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -36,15 +39,17 @@
   box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
 }
 
+/* Hostel Image */
 .hostel-image {
   width: 100%;
-  height: 170px; /* Increased height for images */
+  height: 170px;
   object-fit: cover;
 }
 
+/* Hostel Info Section */
 .hostel-info {
   padding: 1rem;
-  text-align: center;
+  text-align: left;
 }
 
 .hostel-info h3 {
@@ -56,17 +61,51 @@
 .hostel-info p {
   font-size: 1rem;
   color: #555;
+  margin: 0.2rem 0;
 }
 
+/* Star Icon for Wishlist */
+.star-icon {
+  font-size: 1.5rem;
+  color: #ddd; /* Default star color (faint gray for unselected) */
+  cursor: pointer;
+  transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+  background-color: transparent; /* Transparent background */
+  border: 2px solid #ddd; /* Border thickness */
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* To help position the pseudo-element */
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); /* Star shape */
+  padding: 0;
+}
+
+/* Star icon when active (filled) */
+.star-icon.active {
+  color: rgb(58, 58, 55); /* Gold color for filled star */
+  background-color: #fff; /* White background when active */
+  border-color: #ffd700; /* Gold border when active */
+}
+
+/* Align Title and Heart Icon */
+.hostel-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Responsive Design */
 @media (max-width: 1024px) {
   .hostel-card {
-    width: calc(50% - 1.5rem); /* Two cards per row on smaller screens */
+    width: calc(50% - 1.5rem);
   }
 }
 
 @media (max-width: 768px) {
   .hostel-card {
-    width: 100%; /* One card per row on small screens */
+    width: 100%;
   }
 
   .list-title {

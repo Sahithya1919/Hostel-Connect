@@ -8,6 +8,9 @@ import Home from "./pages/Home";
 import List from "./pages/List";
 import Hostel from "./pages/Hostel";
 import About from "./pages/About/About";
+import Profile from "./pages/Profile";
+import Wishlist from "./pages/Wishlist";
+import Login from "./pages/Login";
 
 function App() {
   return (
@@ -15,6 +18,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/about" element={<About />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/wishlist" element={<Wishlist />} />
         <Route path="/hostels" element={<List />}></Route>
         <Route path="/hostels/:id" element={<Hostel />}></Route>
       </Routes>

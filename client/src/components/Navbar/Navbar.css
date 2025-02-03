@@ -1,3 +1,15 @@
 .search-navbar{
   width: 300px;
 }
+.profile-dropdown {
+  min-width: 200px;
+  z-index: 10;
+}
+
+.profile-dropdown p {
+  margin: 0;
+}
+
+.profile-dropdown hr {
+  margin: 10px 0;
+}
