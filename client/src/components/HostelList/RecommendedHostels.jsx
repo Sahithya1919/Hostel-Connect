@@ -1,5 +1,5 @@
-// RecommendedHostels.js
 import { useState } from "react";
+import { Bookmark, BookmarkBorder } from "@mui/icons-material";
 import "./HostelList.css";
 
 const RecommendedHostels = () => {
@@ -55,10 +55,10 @@ const RecommendedHostels = () => {
               <div className="hostel-title">
                 <h3>{hostel.name}</h3>
                 <span
-                  className={`star-icon ${wishlist[index] ? "active" : ""}`}
+                  className="save-icon"
                   onClick={() => toggleWishlist(index)}
                 >
-                  ★
+                  {wishlist[index] ? <Bookmark /> : <BookmarkBorder />}
                 </span>
               </div>
               <p>{hostel.location}</p>
