@@ -2,53 +2,45 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #1f2225; /* Dark gray background */
-  padding: 0.8rem 0.5rem; /* Reduced padding for smaller height */
+  background-color: #1f2225;
+  padding: 0.8rem;
   border-radius: 10px;
-  margin: 1rem 0; /* Reduced margin for less space between hero and bar */
+  margin: 1rem 0;
   width: 100%;
-  max-width: 100%;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
-  gap: 1rem; /* Slightly reduced gap */
-  flex-wrap: wrap;
-  transition: background-color 0.3s ease;
- 
-}
-
-.selection-bar:hover {
-  background-color: #0f1011d9; /* Lighter gray on hover */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  gap: 1rem;
+  flex-wrap: nowrap;
 }
 
 .select-item {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
   flex: 1;
-  min-width: 180px; /* Slightly smaller width for better responsiveness */
+  min-width: 180px;
 }
 
 label {
-  font-size: 0.9rem; /* Reduced font size for compact appearance */
+  font-size: 0.9rem;
   font-weight: bold;
-  color: #fff; /* White text for labels */
+  color: #fff;
+  margin-bottom: 0.3rem;
 }
 
+/* Ensure all elements have the same height */
 .dropdown,
-.price-input {
+.price-input,
+.search-button {
   width: 100%;
-  padding: 0.5rem; /* Reduced padding for smaller input height */
-  font-size: 0.9rem; /* Adjusted font size */
- /* Soft gray border */
+  padding: 0.6rem 0.8rem;
+  font-size: 0.9rem;
+  border: 1px solid #6c757d;
   border-radius: 5px;
   outline: none;
-  background-color: #343a40; /* Darker background for inputs */
-  color: #fff; /* White text */
-  transition: border-color 0.2s ease;
-}
-
-.dropdown:focus,
-.price-input:focus {
-  border-color: #007bff; /* Light blue border on focus */
+  background-color: #343a40;
+  color: #fff;
+  height: 42px; /* Matches input height */
+  display: flex;
+  align-items: center;
 }
 
 .price-inputs {
@@ -58,75 +50,73 @@ label {
 }
 
 .separator {
-  font-size: 1rem; /* Reduced separator size */
-  color: #ddd; /* Light gray for separator */
+  font-size: 1.2rem;
+  color: #ddd;
 }
 
-/* Search button */
+/* 🔍 Search button with icon */
 .search-button {
- margin-top: 28px;
-  background-color: #343a40; /* Slightly dark gray to contrast with input */
+  width: fit-content;
+  background-color: transparent;
   color: white;
-  padding: 0.5rem 1rem; /* Adjusted padding for smaller button height */
-  font-size: 0.9rem; /* Reduced font size */
-  border: 1px solid #958f8f; /* Darker border for contrast */
+  border: 1px solid #6c757d;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-  height: auto; /* Dynamically adjust height */
-  min-width: 140px; /* Reduced button width */
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  height: 42px; /* Ensures same height */
+  min-width: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 25px;
 }
 
+/* Align search button with input fields */
+.search-button svg {
+  width: 18px;
+  height: 18px;
+  fill: #fff;
+}
+
+/* Hover effect */
 .search-button:hover {
-  background-color: #222; /* Darker shade on hover */
+  background-color: #6c757d;
+  border-color: #fff;
 }
 
 /* Responsive styles */
-@media (max-width: 1024px) {
-  .selection-bar {
-    padding: 1rem 0.5rem; /* Adjusted padding */
-  }
-
-  .select-item {
-    flex: 1 0 48%;
-  }
-
-  .search-button {
-    width: 100%;
-    padding: 0.75rem; /* Adjusted padding */
-  }
-}
-
 @media (max-width: 768px) {
   .selection-bar {
-    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 0.5rem;
     gap: 0.5rem;
-    padding: 0.5rem; /* Reduced padding for smaller screens */
   }
 
   .select-item {
-    max-width: 100%;
+    flex: 1 0 25%;
+    min-width: auto;
   }
 
   .search-button {
-    width: 100%;
-    padding: 0.75rem; /* Adjusted padding */
+    width: 42px;
+    height: 42px;
   }
 }
 
 @media (max-width: 480px) {
   .selection-bar {
+    flex-wrap: nowrap;
+    gap: 0.3rem;
     padding: 0.5rem;
-    margin: 0.5rem 0; /* Further reduced margin for compact layout */
   }
 
   .select-item {
-    max-width: 100%;
-    width: 100%;
+    flex: 1 0 22%;
   }
 
   .search-button {
-    width: 100%;
-    padding: 0.75rem; /* Adjusted padding */
+    width: 42px;
+    height: 42px;
+    
   }
 }

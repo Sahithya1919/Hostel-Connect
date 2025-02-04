@@ -1,15 +1,39 @@
-.search-navbar{
-  width: 300px;
-}
-.profile-dropdown {
-  min-width: 200px;
-  z-index: 10;
+.search-navbar {
+  width: 250px;
 }
 
-.profile-dropdown p {
+.search-small {
+  flex-grow: 1;
+  max-width: 250px;
+}
+
+.profile-dropdown, .menu-dropdown {
+  min-width: 200px;
+  z-index: 1000;
+}
+
+.profile-dropdown p, .menu-dropdown a {
   margin: 0;
 }
 
-.profile-dropdown hr {
+.profile-dropdown hr, .menu-dropdown hr {
   margin: 10px 0;
+}
+
+.menu-container, .profile-container {
+  position: relative;
+}
+
+@media (max-width: 992px) {
+  .search-navbar {
+    max-width: 350px; /* Increase the width for better appearance */
+  }
+
+  .search-small {
+    max-width: 350px; /* Match search bar width */
+  }
+
+  .btn-outline-light {
+    border-color: rgba(255, 255, 255, 0.5); /* Lighter border */
+  }
 }

@@ -49,7 +49,24 @@ const SelectionBar = () => {
         </div>
       </div>
 
-      <button className="search-button">Search</button>
+      {/* Search button with icon (SVG included) */}
+      <button className="search-button">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          width="20"
+          height="20"
+        >
+          <path
+            fill="currentColor"
+            d="M10,2A8,8,0,1,0,18,10,8.009,8.009,0,0,0,10,2ZM10,16A6,6,0,1,1,16,10,6.006,6.006,0,0,1,10,16Z"
+          />
+          <path
+            fill="currentColor"
+            d="M21.707,20.293l-4.5-4.5a1,1,0,0,0-1.414,1.414l4.5,4.5a1,1,0,0,0,1.414-1.414Z"
+          />
+        </svg>
+      </button>
     </div>
   );
 };
